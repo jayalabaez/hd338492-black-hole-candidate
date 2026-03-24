@@ -1,6 +1,6 @@
 # HD 338492 — Compelling Black Hole Candidate from Gaia DR3
 
-> **Jayson Ayala-Baez** | Independent Researcher  
+> **Joel Ayala-Baez** | Independent Researcher  
 > Paper status: Submitted / Under review
 
 ## Summary
@@ -87,7 +87,7 @@ python scripts/06_make_figures.py
 If you use this work, please cite:
 
 ```
-Ayala-Baez, J. (2025). HD 338492 as a Compelling Black Hole Candidate
+Ayala-Baez, Joel (2025). HD 338492 as a Compelling Black Hole Candidate
 from Gaia DR3 Astrometric–Spectroscopic Binary Analysis.
 ```
 
