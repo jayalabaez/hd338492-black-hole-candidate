@@ -1,0 +1,84 @@
+\documentclass[11pt]{letter}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+
+\signature{Joel Ayala-Baez}
+\address{Independent Researcher\\jayalabaez@gmail.com}
+
+\begin{document}
+\begin{letter}{The Editor\\Monthly Notices of the Royal Astronomical Society}
+
+\opening{Dear Editor,}
+
+I am submitting the manuscript entitled \textbf{``HD~338492: A
+High-Mass Dark Companion Candidate from Gaia DR3
+Astrometric--Spectroscopic Binary Data''} for consideration for
+publication in MNRAS.
+
+This paper presents an archival multi-wavelength analysis of
+HD~338492, a single-lined spectroscopic binary in the Gaia~DR3
+non-single-star catalogue whose dynamical properties point to a
+dormant black hole (BH) companion.  The key results are:
+
+\begin{itemize}
+\item A spectroscopic mass function $f(M) = 2.39\,M_\odot$, which
+  exceeds the Chandrasekhar limit from dynamics alone.
+\item A minimum companion mass $M_{2,\min} = 6.62\,M_\odot$ (for
+  $M_1 = 4.40\,M_\odot$), well above the neutron-star ceiling.
+\item No luminous companion detected in any photometric band
+  (optical through mid-infrared), and no X-ray emission.
+\item Four of six alternative non-BH scenarios excluded on dynamical
+  and photometric grounds; the remaining two (hierarchical triple
+  and stripped helium star) are strongly constrained but require
+  targeted follow-up to close definitively.
+\end{itemize}
+
+\textbf{What this paper does, and what it does not claim.}
+This work identifies HD~338492 as a strong BH \emph{candidate}
+based solely on publicly available archival data.  We are
+transparent about its limitations: the stellar characterisation
+relies on the SIMBAD B9 spectral classification (not independently
+verified), the SED uses a blackbody approximation, and no
+independent radial-velocity confirmation exists.  We present a
+sensitivity analysis (Table~4) demonstrating how the BH probability
+depends on the adopted mass threshold, primary-mass prior, and
+extinction.  Under fiducial assumptions $P(\mathrm{BH}) = 99.7\%$,
+but this drops to $\sim\!89\%$ if the B9 anchor is abandoned
+entirely --- underscoring the importance of follow-up
+spectroscopy.  We explicitly identify the follow-up programme
+needed to close the remaining gaps: independent multi-epoch
+radial velocities, a modern spectroscopic classification, and UV
+observations.
+
+The discovery of Gaia~BH1, BH2, and BH3 has demonstrated the
+power of Gaia astrometric--spectroscopic solutions for finding
+dormant BHs.  These landmark systems were each confirmed with
+independent RV campaigns.  By presenting a carefully vetted
+archival candidate with a clearly defined follow-up programme, this
+paper aims to expand the search space for dormant BHs from DR3 and
+to motivate the observational resources needed for confirmation.
+
+The full analysis pipeline (six reproducible Python scripts),
+input data, and all intermediate results are publicly available at
+\url{https://github.com/jayalabaez/hd338492-black-hole-candidate}
+and will be archived on Zenodo at proof stage.
+
+No portion of this work has been published or is under review
+elsewhere.  The manuscript is approximately 5\,000 words in
+length with 6 figures and 4 tables.
+
+I suggest the following potential referees with expertise in Gaia
+compact-object binaries:
+\begin{itemize}
+\item Kareem El-Badry (Caltech) --- lead author of Gaia BH1--BH3
+\item Tomer Shenar (University of Amsterdam) --- binary-star
+  spectroscopy and BH candidates
+\item Tsevi Mazeh (Tel Aviv University) --- Gaia spectroscopic
+  binaries
+\end{itemize}
+
+Thank you for considering this submission.
+
+\closing{Sincerely,}
+\end{letter}
+\end{document}

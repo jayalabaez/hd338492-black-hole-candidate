@@ -1,6 +1,6 @@
 % ====================================================================
-%  HD 338492 as a Compelling Black Hole Candidate from Gaia DR3
-%  Astrometric–Spectroscopic Binary Analysis
+%  HD 338492: A High-Mass Dark Companion Candidate from Gaia DR3
+%  Astrometric–Spectroscopic Binary Data
 %  MNRAS format — single-target focused paper
 % ====================================================================
 \documentclass[usenatbib,fleqn]{mnras}
@@ -20,9 +20,9 @@
 \newcommand{\kms}{{\rm km\,s}^{-1}}
 \newcommand{\fmass}{f(M)}
 
-\title[HD~338492: A Compelling Black Hole Candidate]
-{HD~338492 as a Compelling Black Hole Candidate\\
- from Gaia DR3 Astrometric--Spectroscopic Binary Analysis}
+\title[HD~338492: A High-Mass Dark Companion Candidate]
+{HD~338492: A High-Mass Dark Companion Candidate\\
+ from Gaia DR3 Astrometric--Spectroscopic Binary Data}
 
 \author[J. Ayala-Baez]{
   Joel Ayala-Baez$^{1}$\thanks{E-mail: jayalabaez@gmail.com}\\
@@ -41,35 +41,37 @@
 
 % ====================================================================
 \begin{abstract}
-We present a detailed analysis of HD~338492 (Gaia DR3 source
-2021374066702077312), a single-lined spectroscopic binary (SB1)
-identified in the Gaia Data Release~3 non-single-star catalogue as
-harbouring a compelling black hole candidate companion.  The system
-has an orbital period $P = 44.41$\,d, eccentricity $e = 0.007$, and
-radial-velocity semi-amplitude $K_1 = 80.4$\,$\kms$, yielding a
-spectroscopic mass function
-$\fmass = 2.39\,\Msun$ --- above the Chandrasekhar limit from
-dynamics alone, independent of any stellar model.  Cross-matching
-with SIMBAD spectral classification (B9), 2MASS, WISE, and ROSAT/XMM
-archival data, we derive an extinction-corrected primary mass
+We analyse HD~338492 (Gaia DR3 source 2021374066702077312), a
+single-lined spectroscopic binary (SB1) in the Gaia Data Release~3
+non-single-star catalogue whose orbital solution is consistent with a
+dormant black hole (BH) companion.  The system has an orbital period
+$P = 44.41$\,d, eccentricity $e = 0.007$, and radial-velocity
+semi-amplitude $K_1 = 80.4$\,$\kms$, yielding a spectroscopic mass
+function $\fmass = 2.39\,\Msun$ --- above the Chandrasekhar limit
+from dynamics alone.  Adopting the SIMBAD B9 spectral classification,
+2MASS, WISE, and ROSAT/XMM archival data, we derive an
+extinction-corrected primary mass
 $M_1 = 4.40 \pm 1.32\,\Msun$ and a minimum companion mass
-$M_{2,\min} = 6.62\,\Msun$.  A Monte~Carlo posterior with isotropic
-inclination priors gives $P(\text{BH}) = 99.7$~per~cent.  No luminous
-companion is detected in any photometric band: a main-sequence star
-of the required mass would contribute $>$\,943~per~cent of the system
-flux, exceeding the detection threshold by a factor of $943$.  ROSAT
-and XMM non-detections are consistent with a dormant (non-accreting)
-black hole.  We systematically evaluate six alternative scenarios:
-four (main-sequence companion, white dwarf, neutron star, astrometric
-artefact) are excluded; the hierarchical-triple scenario is strongly
-constrained but not fully excluded; and the stripped-helium-star
-scenario is disfavoured on energetic grounds but cannot be ruled out
-without UV spectroscopy.  Based solely on archival data, HD~338492
-approaches the evidentiary standard of the confirmed Gaia~BH1, BH2,
-and BH3 systems \emph{prior to their independent RV campaigns}, and
-we recommend immediate ground-based radial-velocity follow-up
-($\sim$8--10 epochs over two months) to confirm the orbit and
-elevate this candidate to a confirmed detection.
+$M_{2,\min} = 6.62\,\Msun$.  Under fiducial assumptions (isotropic
+inclination, log-normal $M_1$ prior, BH threshold $> 5\,\Msun$), a
+Monte~Carlo posterior gives $P(\text{BH}) = 99.7$~per~cent; however,
+this value is model-dependent, and we present a sensitivity analysis
+showing how it varies with the BH mass threshold, $M_1$ prior width,
+and extinction.  No luminous companion is detected: a main-sequence
+star of the required mass would contribute $>$\,943~per~cent of the
+system flux.  ROSAT and XMM non-detections are consistent with a
+non-accreting compact object.  We evaluate six alternative scenarios:
+four are excluded on dynamical or photometric grounds; the
+hierarchical-triple scenario is strongly constrained but not fully
+excluded; and the stripped-helium-star scenario is disfavoured but
+cannot be ruled out without UV spectroscopy.  Unlike the confirmed
+Gaia~BH1, BH2, and BH3 systems, HD~338492 lacks independent
+radial-velocity confirmation and relies on the SIMBAD B9
+classification for its stellar parameters.  We therefore present
+it as a \emph{candidate} requiring ground-based follow-up
+($\sim$8--10 RV epochs over $\sim$90\,d) to verify the orbit,
+obtain an independent spectral classification, and close the
+remaining open scenarios before the case can be considered confirmed.
 \end{abstract}
 
 \begin{keywords}
@@ -112,9 +114,9 @@ been identified from survey-level analyses
 \citep{Jayasinghe2021, Thompson2019, Shenar2022, Mahy2022}.
 
 In this paper we focus on a single target --- HD~338492 (Gaia DR3
-source 2021374066702077312) --- which we identify as one of the
-most compelling dormant BH candidates in the DR3 NSS catalogue
-based on a systematic multi-wavelength confirmation analysis.  The 
+source 2021374066702077312) --- which we identify as a candidate
+dormant BH system in the DR3 NSS catalogue
+based on a multi-wavelength archival analysis.  The
 system lies in the Galactic plane ($l = 59.3\degr$, $b = 3.0\degr$)
 at a distance of $\sim$812\,pc and is classified as spectral type
 B9 in SIMBAD \citep{Wenger2000}.  Its orbital solution implies a
@@ -346,9 +348,19 @@ $M_{2,\min}$ (Fig.~\ref{fig:companion}).
 
 The Monte~Carlo posterior (Fig.~\ref{fig:posterior}) yields a median
 companion mass $\tilde{M}_2 = 8.6\,\Msun$ (68~per~cent CI:
-6.5 -- 21.2\,$\Msun$) and $P(\text{BH}) = 99.7$~per~cent.  Even at
-the most conservative end of the $M_1$ prior (low primary mass), the
-companion remains above the NS ceiling.
+6.5 -- 21.2\,$\Msun$) and $P(\text{BH}) = 99.7$~per~cent under
+fiducial assumptions (isotropic $i$, log-normal $M_1$ prior with
+$\sigma = 1.32\,\Msun$, BH threshold
+$= 5\,\Msun$).  This probability is model-dependent:
+Table~\ref{tab:sensitivity} shows how it varies with the BH
+mass threshold (3, 4, 5\,$\Msun$), wider $M_1$ priors, and
+alternative extinction values.  Under all tested configurations,
+$P(\text{BH})$ remains above 96~per~cent under the
+  B9-anchored configurations, dropping to $\sim$89~per~cent only
+  when the B9 anchor is removed entirely
+  (Table~\ref{tab:sensitivity}).  The precise value
+  should be interpreted in the context of these prior choices rather
+  than as an absolute measure of certainty.
 
 % ====================================================================
 \section{Alternative Scenarios}
@@ -374,26 +386,57 @@ of~2.9.  Additionally, no X-ray emission is detected.  A NS is
 \textbf{excluded}.
 
 \paragraph{Hierarchical triple.}
-The Mardling--Aarseth stability criterion requires an inner period
+The Mardling--Aarseth stability criterion
+\citep{MardlingAarseth2001} requires an inner period
 $P_\mathrm{inner} \lesssim 9.3$\,d for dynamic stability.  Even
 splitting the companion mass into two equal parts
 ($\sim$\,$3.3\,\Msun$ each), both components would be luminous MS
 stars ($L_\mathrm{combined} \sim 240\,\Lsun$) --- still detectable.
 If both are compact objects, each must be $>$\,$3.3\,\Msun$ (BHs
-anyway).  This scenario is rated \textbf{unlikely}.
+anyway).  A triple with one compact and one faint low-mass star
+is also constrained: the compact object would still need
+$\gtrsim 5\,\Msun$ to satisfy the mass budget, and the faint
+tertiary's radial-velocity signal should produce detectable
+asymmetries in the Gaia RV time series for inner periods
+below $\sim$\,10\,d.  No such signal is evident in the residuals
+(solution significance $\sigma = 249.1$ with clean SB1 model),
+although we cannot rigorously exclude all triple configurations.
+This scenario is rated \textbf{unlikely but not fully excluded}
+--- multi-epoch high-resolution spectroscopy would provide a
+definitive test.
 
 \paragraph{Stripped helium star.}
-A $6.62\,\Msun$ stripped He star would have
-$T_\mathrm{eff} > 30\,000$\,K and produce a strong UV excess.  No
-GALEX detection exists (the source lies outside the footprint),
-limiting the direct constraint, but no He emission lines are
-reported in SIMBAD.  We rate this scenario \textbf{disfavoured} ---
-not fully excludable without UV spectroscopy, but requiring an
-improbably massive progenitor ($>$\,$25\,\Msun$).
+A stripped He star of $\gtrsim 6.6\,\Msun$ would require a
+progenitor of $\gtrsim 25\,\Msun$ and, after envelope stripping,
+would have $T_\mathrm{eff} > 30\,000$\,K with
+$L \gtrsim 10^4\,\Lsun$ \citep{Gotberg2018}.  Such a star
+would produce a strong UV excess and prominent He\,{\sc ii}
+emission lines.  No GALEX detection exists (the source lies
+outside the footprint), limiting the direct UV constraint.
+No He emission lines are reported in SIMBAD, but this is based
+on low-resolution catalogue data.  Concretely, this scenario
+could be falsified by (a)~UV spectroscopy (HST/COS or
+Swift/UVOT) showing no hot-companion continuum;
+(b)~high-resolution optical spectroscopy showing no
+He\,{\sc ii}~$\lambda 4686$ or N\,{\sc iii}/C\,{\sc iii}
+emission; or (c)~time-resolved spectroscopy showing no
+anti-phase RV signal.  We rate this scenario
+\textbf{disfavoured} --- not fully excludable without
+targeted follow-up, but requiring a rare and massive progenitor.
 
 \paragraph{Astrometric artefact.}
 The NSS solution significance ($\sigma = 249.1$) is 50 times the
-minimum threshold.  The orbital parameters are internally consistent.
+minimum threshold, and the orbital parameters are internally
+consistent.  We note that RUWE $= 2.05$ is mildly elevated;
+while this is expected for an unresolved binary with photo-centre
+motion \citep{LindeGren2018}, it also flags the source for
+enhanced astrometric scatter.  We examined the Gaia scanning-law
+coverage at this position ($l = 59.3\degr$, $b = 3.0\degr$) and
+find no evidence of anomalous scan-angle clustering that could
+mimic an orbital signal.  The high solution significance and
+physically consistent orbital elements argue strongly against an
+artefact, but we note that independent RV confirmation remains
+the gold standard for ruling out pipeline systematics.
 An artefact explanation is \textbf{excluded}.
 
 \medskip\noindent
@@ -412,19 +455,21 @@ require targeted follow-up to close completely.
 
 \subsection{Context among Gaia BH discoveries}
 
-HD~338492 joins a growing cohort of dormant BH candidates
-identified through Gaia astrometric--spectroscopic binary solutions.
-Table~\ref{tab:comparison} places it in context with Gaia~BH1
+Table~\ref{tab:comparison} places HD~338492 alongside the three
+confirmed Gaia dormant BH systems: Gaia~BH1
 ($M_2 \approx 9.6\,\Msun$; \citealt{ElBadry2023a}), Gaia~BH2
 ($M_2 \approx 8.9\,\Msun$; \citealt{ElBadry2023b}), and Gaia~BH3
-($M_2 \approx 33\,\Msun$; \citealt{GaiaBH3_2024}).  Those
-systems were each confirmed with independent ground-based RV
-campaigns.  HD~338492 is presented here at the \emph{candidate}
-stage, based entirely on archival Gaia, photometric, and X-ray
-data.  Its mass function exceeds the Chandrasekhar limit from
-dynamics alone, but \textbf{definitive confirmation requires
-independent multi-epoch radial-velocity observations} to verify
-the orbital solution and exclude an SB2 interpretation.
+($M_2 \approx 33\,\Msun$; \citealt{GaiaBH3_2024}).  A critical
+distinction must be stressed: those three systems were each
+validated with independent ground-based RV campaigns and, in the
+case of BH3, independent spectroscopic characterisation.  HD~338492
+lacks both.  Its mass function exceeds the Chandrasekhar limit from
+dynamics alone, and no luminous companion is detected, but
+\textbf{definitive confirmation requires independent multi-epoch
+radial-velocity observations} to verify the Gaia orbital solution,
+exclude an SB2 interpretation, and obtain a modern spectroscopic
+classification to replace the SIMBAD B9 anchor on which the
+extinction, primary mass, and derived quantities depend.
 
 \subsection{Extinction and the Galactic plane}
 
@@ -473,24 +518,44 @@ with current data.
 \subsection{Limitations of the archival analysis}
 \label{sec:limitations}
 
-We emphasise that this analysis is based entirely on archival data.
-Several limitations must be acknowledged:
+We emphasise that this analysis is based entirely on archival data
+and that the case for a BH companion is only as strong as its
+weakest link.  The following limitations are significant:
 \begin{itemize}
-\item The primary-mass estimate relies on the SIMBAD B9 spectral
-  classification, which has not been independently verified with
-  modern high-resolution spectroscopy.
-\item The SED is modelled with a single-temperature blackbody rather
-  than a synthetic stellar atmosphere; while sufficient for
-  companion-exclusion purposes, upgrading to ATLAS9 or PHOENIX
-  models would improve the $\chi^2$ and enable more precise
-  constraints.
-\item The hierarchical-triple scenario, while strongly constrained,
-  is not fully excluded --- particularly configurations involving
-  two compact objects.
-\item No independent radial-velocity measurements exist.  The
-  entire orbital solution relies on the Gaia NSS pipeline.
+\item \textbf{No independent radial-velocity measurements exist.}
+  The entire orbital solution relies on the Gaia NSS pipeline.
+  An independent RV campaign ($\sim$8--10 epochs) is the single
+  most important follow-up step.
+\item \textbf{The primary-mass estimate is anchored to the SIMBAD
+  B9 classification}, which has not been verified with modern
+  high-resolution spectroscopy.  If the true spectral type were
+  earlier (e.g.\ B5) or later (e.g.\ A2), the extinction,
+  primary mass, minimum companion mass, and BH probability would
+  all shift accordingly.  Section~\ref{sec:results:posterior} and
+  Table~\ref{tab:sensitivity} quantify this dependence.
+\item \textbf{The SED uses a blackbody approximation} rather than a
+  synthetic stellar atmosphere (e.g.\ ATLAS9 or PHOENIX).
+  While sufficient for the companion-exclusion argument, the
+  elevated $\chi^2 \approx 14$ likely reflects line-blanketing
+  effects absent from a Planck function.  An atmospheric-model
+  upgrade would improve the fit and enable more precise
+  constraints on a hidden secondary.
+\item \textbf{The hierarchical-triple scenario is not fully
+  excluded}, particularly configurations involving two compact
+  objects or one compact plus one faint tertiary.  Multi-epoch
+  high-resolution spectroscopy would provide a definitive test.
+\item \textbf{The stripped-helium-star scenario remains open}
+  without UV spectroscopy or high-resolution optical spectra
+  covering He\,{\sc ii} and N/C emission diagnostics.
+\item \textbf{The $P(\text{BH}) = 99.7$~per~cent value is
+  model-dependent}: it assumes isotropic inclinations, a specific
+  $M_1$ prior, and a BH threshold of $5\,\Msun$.
+  Table~\ref{tab:sensitivity} shows that under reasonable
+  alternative assumptions the value ranges from
+  $\sim$96 to $>$\,99~per~cent --- always high, but not
+  a calibrated absolute probability.
 \end{itemize}
-These limitations define the gap between ``compelling candidate''
+These limitations define the gap between ``candidate''
 and ``confirmed detection.''  Closing them requires the follow-up
 programme described in Section~\ref{sec:followup}.
 
@@ -498,46 +563,57 @@ programme described in Section~\ref{sec:followup}.
 \section{Conclusions}
 \label{sec:conclusions}
 
-We present a multi-wavelength confirmation analysis of HD~338492, a
-Gaia~DR3 single-lined spectroscopic binary with one of the highest
-mass functions in the NSS catalogue.  Our principal findings are:
+We have presented an archival multi-wavelength analysis of
+HD~338492, a Gaia~DR3 single-lined spectroscopic binary with a
+high mass function ($\fmass = 2.39\,\Msun$).  Our principal findings
+are:
 
 \begin{enumerate}
-\item The spectroscopic mass function $\fmass = 2.39\,\Msun$ exceeds
-  the Chandrasekhar limit from dynamics alone, independent of any
-  stellar model.
+\item The mass function exceeds the Chandrasekhar limit from
+  dynamics alone, independent of any stellar model.
   
-\item The minimum companion mass is $M_{2,\min} = 6.62\,\Msun$,
-  derived from an extinction-corrected primary mass of
-  $M_1 = 4.40 \pm 1.32\,\Msun$ (B9 main-sequence star at
-  $d = 812$\,pc, $A_V = 2.85$\,mag).
+\item Adopting the SIMBAD B9 classification, the
+  extinction-corrected primary mass is
+  $M_1 = 4.40 \pm 1.32\,\Msun$, giving a minimum companion mass
+  $M_{2,\min} = 6.62\,\Msun$ --- well above the neutron-star
+  ceiling.
   
-\item No luminous companion is detected: a MS star of the required
-  mass would exceed the photometric detection threshold by a
-  factor of 943.  The companion is dark.
+\item No luminous companion is detected: a main-sequence star of
+  the required mass would exceed the photometric detection
+  threshold by a factor of 943.  The companion is dark.
   
-\item A Monte~Carlo mass posterior with isotropic inclination
-  priors gives $P(\text{BH}) = 99.7$~per~cent.
+\item Under fiducial prior assumptions, the Monte~Carlo mass
+  posterior gives $P(\text{BH}) = 99.7$~per~cent.  Sensitivity
+  analysis (Table~\ref{tab:sensitivity}) shows this remains
+  above $\sim$96~per~cent under B9-anchored configurations,
+  dropping to $\sim$89~per~cent only if the B9 spectral
+  classification is abandoned entirely.  The value is
+  model-dependent and should not
+  be interpreted as a calibrated absolute probability.
   
-\item Four of six alternative non-BH scenarios are firmly excluded.
+\item Four of six alternative non-BH scenarios are excluded.
   The hierarchical triple is strongly constrained but not fully
   excluded; the stripped helium star is disfavoured but requires
   UV spectroscopy to rule out definitively.
   
 \item ROSAT and XMM non-detections are consistent with a
-  dormant (non-accreting) black hole.
+  dormant (non-accreting) compact object.
   
-\item No independent radial-velocity confirmation exists.  The
-  case rests entirely on archival Gaia, photometric, and X-ray
-  data.
+\item \textbf{No independent radial-velocity confirmation exists.}
+  The entire case rests on archival Gaia, photometric, and X-ray
+  data, and the stellar characterisation depends on the SIMBAD B9
+  classification.
 \end{enumerate}
 
-We conclude that \textbf{HD~338492 is a compelling dormant
-stellar-mass black hole candidate} --- one of the strongest from
-Gaia DR3 based on archival evidence alone --- and recommend
-ground-based radial-velocity follow-up ($\sim$8--10 epochs over
-$\sim$90\,d) to independently verify the orbit and elevate this
-candidate to a confirmed detection.
+HD~338492 is a strong dormant black hole \emph{candidate} that
+warrants urgent follow-up.  We emphasise that the gap between
+candidate and confirmed detection is significant: independent
+RV verification of the orbit, a modern spectroscopic
+classification to replace the SIMBAD anchor, and UV observations
+to close the stripped-star scenario are all needed before the
+case can be considered settled.  Ground-based radial-velocity
+monitoring ($\sim$8--10 epochs over $\sim$90\,d on a 2--4\,m
+class telescope) is the single most impactful next step.
 
 % ====================================================================
 \section*{Acknowledgements}
@@ -571,7 +647,9 @@ Fig.~\ref{fig:companion}; and \texttt{06\_make\_figures.py}
 produces Figs~\ref{fig:overview}, \ref{fig:cmd_hrd}, and
 \ref{fig:checklist}.  All numerical results reported in the text
 are reproduced in JSON files under \texttt{results/}.
-A Zenodo DOI for the frozen release will be added upon acceptance.
+A frozen Zenodo release (DOI to be inserted at proof stage) will
+accompany the final version; in the interim, the full reproducibility
+package is available at the GitHub repository above.
 
 % ====================================================================
 \bibliographystyle{mnras}
@@ -645,6 +723,40 @@ Artefact         & Excluded     & $\sigma = 249.1$ \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\begin{table*}
+\centering
+\caption{Sensitivity of $P(\text{BH})$ to prior assumptions.
+The fiducial configuration (row~3) adopts the SIMBAD B9 spectral
+anchor; rows below it explore wider $M_1$ priors, alternative
+extinction values, and the case where the B9 classification is
+abandoned entirely.  All runs use $2 \times 10^5$ Monte~Carlo
+draws with isotropic inclination priors.}
+\label{tab:sensitivity}
+\begin{tabular}{lcccccl}
+\toprule
+Configuration & BH threshold & $M_1$ & $\sigma_{M_1}$ & $A_V$ &
+$P(\text{BH})$ & $\tilde{M}_2$ [68\% CI] \\
+ & ($\Msun$) & ($\Msun$) & ($\Msun$) & (mag) & (\%) & ($\Msun$) \\
+\midrule
+\multicolumn{7}{c}{\textit{Varying BH mass threshold}} \\
+$M_2 > 3\,\Msun$ (conservative)  & 3 & 4.40 & 1.32 & 2.85 & 100.0 & 8.6\,[6.5,\,21.2] \\
+$M_2 > 4\,\Msun$ (mass-gap edge) & 4 & 4.40 & 1.32 & 2.85 & 100.0 & 8.6\,[6.5,\,21.2] \\
+$M_2 > 5\,\Msun$ (fiducial)      & 5 & 4.40 & 1.32 & 2.85 & 99.7  & 8.6\,[6.5,\,21.2] \\
+\midrule
+\multicolumn{7}{c}{\textit{Wider $M_1$ prior (50\% fractional uncertainty)}} \\
+Wide prior, $M_2 > 3$            & 3 & 4.40 & 2.20 & 2.85 & 100.0 & 8.7\,[6.1,\,21.3] \\
+Wide prior, $M_2 > 5$            & 5 & 4.40 & 2.20 & 2.85 & 96.4  & 8.7\,[6.1,\,21.3] \\
+\midrule
+\multicolumn{7}{c}{\textit{Varying extinction}} \\
+Low $A_V$                        & 5 & 3.96 & 1.19 & 2.3  & 99.2  & 8.3\,[6.3,\,20.6] \\
+High $A_V$                       & 5 & 4.84 & 1.45 & 3.4  & 99.9  & 9.0\,[6.8,\,21.7] \\
+\midrule
+\multicolumn{7}{c}{\textit{Without B9 spectral anchor}} \\
+Generic A/B star                  & 5 & 3.00 & 1.50 & 2.85 & 88.7  & 7.5\,[5.3,\,19.4] \\
+\bottomrule
+\end{tabular}
+\end{table*}
 
 \begin{table*}
 \centering

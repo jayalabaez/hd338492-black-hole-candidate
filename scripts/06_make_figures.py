@@ -134,7 +134,7 @@ def fig1_system_overview():
                      transform=ax3.transAxes, va='top')
         y -= 0.052
 
-    fig.suptitle('HD 338492 — Compelling Black Hole Candidate',
+    fig.suptitle('HD 338492 \u2014 High-Mass Dark Companion Candidate',
                  fontsize=14, fontweight='bold', y=1.02)
     fig.tight_layout()
     out = os.path.join(FIGDIR, 'fig1_system_overview.pdf')
@@ -256,7 +256,7 @@ def fig6_confirmation_checklist():
     ax.axhline(y_bot + 0.5, color='black', lw=1.5, xmin=0.02, xmax=0.98)
     ax.text(0.5, y_bot - 0.3,
             f'Score: {n_pass}P / {n_open}O / {n_fail}F — '
-            f'Verdict: COMPELLING BH CANDIDATE',
+            f'Verdict: STRONG BH CANDIDATE (requires RV confirmation)',
             fontsize=12, fontweight='bold', color='#27ae60')
 
     fig.suptitle('HD 338492 — Confirmation Checklist',

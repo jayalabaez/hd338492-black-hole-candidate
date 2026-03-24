@@ -215,9 +215,9 @@ def main():
         'n_disfavoured': n_disfavoured,
         'surviving_scenarios': surviving,
         'final_assessment': final,
-        'claim_level': 'COMPELLING BH CANDIDATE',
+        'claim_level': 'STRONG BH CANDIDATE (requires RV confirmation)',
         'claim_justification': textwrap.dedent("""\
-            HD 338492 satisfies all requirements for a compelling BH candidate:
+            HD 338492 meets core criteria for a strong BH candidate:
             - Dynamical M2_min = 6.62 Msun (above NS/WD ceilings)
             - f(M) = 2.39 Msun alone exceeds Chandrasekhar limit
             - No luminous companion detected (943x exclusion)
