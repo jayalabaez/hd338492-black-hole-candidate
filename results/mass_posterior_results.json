@@ -1,0 +1,26 @@
+{
+  "mass_function_msun": 2.3927,
+  "M1_best": 4.4,
+  "M1_sigma": 1.32,
+  "M2_min_catalog_M1": 5.75,
+  "M2_min_HR_M1": 6.63,
+  "M2_min_range": [
+    5.69,
+    7.46
+  ],
+  "M2_absolute_floor": 2.39,
+  "MC_draws": 200000,
+  "MC_valid": 199404,
+  "M2_median": 8.63,
+  "M2_68ci": [
+    6.54,
+    21.2
+  ],
+  "M2_90ci": [
+    5.84,
+    79.03
+  ],
+  "P_BH_percent": 99.7,
+  "P_massgap_percent": 0.3,
+  "P_NS_percent": 0.0
+}

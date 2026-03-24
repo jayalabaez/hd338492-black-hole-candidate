@@ -1,0 +1,28 @@
+{
+  "M1": 4.4,
+  "M2_min": 6.62,
+  "L_primary": 249.8,
+  "Teff_primary": 10500,
+  "L_companion_hyp": 2356.3,
+  "Teff_companion_hyp": 16969.0,
+  "R_companion_hyp": 5.62,
+  "bolometric_ratio": 9.4329,
+  "brightening_mag": -2.546,
+  "band_flux_ratios": {
+    "G": 26.1117,
+    "BP": 30.1587,
+    "RP": 23.0472,
+    "J": 19.4314,
+    "H": 18.1506,
+    "Ks": 17.3832,
+    "W1": 16.5504,
+    "W2": 16.1715,
+    "FUV": 281.3312,
+    "NUV": 92.5999
+  },
+  "max_hidden_mass": 1.36,
+  "detection_threshold": 0.01,
+  "exclusion_factor": 943.0,
+  "colour_shift_BP_RP": -0.281,
+  "verdict": "LUMINOUS COMPANION EXCLUDED"
+}

@@ -1,0 +1,32 @@
+parameter,value,unit,source,notes
+name,HD 338492,,SIMBAD,
+source_id,2021374066702077312,,Gaia DR3,
+ra,292.72283804,deg,Gaia DR3,ICRS
+dec,24.75113317,deg,Gaia DR3,ICRS
+l,59.30,deg,Gaia DR3,Galactic longitude
+b,3.01,deg,Gaia DR3,Galactic latitude
+parallax,1.232,mas,Gaia DR3,
+parallax_error,0.0284,mas,Gaia DR3,
+distance,811.6,pc,Gaia DR3,1/parallax
+G,10.04,mag,Gaia DR3,
+BP,10.47,mag,Gaia DR3,
+RP,9.43,mag,Gaia DR3,
+BP_RP,1.039,mag,Gaia DR3,observed (reddened)
+rv_sys,-43.90,km/s,Gaia DR3 NSS,systemic RV
+rv_err,16.93,km/s,Gaia DR3 NSS,
+ruwe,2.05,,Gaia DR3,
+period,44.41,d,Gaia DR3 NSS SB1,
+period_err,0.0037,d,Gaia DR3 NSS SB1,
+eccentricity,0.007,,Gaia DR3 NSS SB1,near-circular
+ecc_err,0.0037,,Gaia DR3 NSS SB1,
+K1,80.355,km/s,Gaia DR3 NSS SB1,RV semi-amplitude
+K1_err,0.323,km/s,Gaia DR3 NSS SB1,
+significance,249.1,,Gaia DR3 NSS SB1,
+goodness_of_fit,1.240,,Gaia DR3 NSS SB1,
+M1_catalog,3.16,Msun,Gaia DR3 NSS,catalogue estimate
+M2_catalog,5.75,Msun,Gaia DR3 NSS,catalogue M2_min
+sol_type,SB1,,Gaia DR3 NSS,single-lined spectroscopic binary
+simbad_sptype,B9,,SIMBAD,spectroscopic classification
+simbad_otype,SB*,,SIMBAD,spectroscopic binary star
+ipd_harm_ampl,0.0366,,Gaia DR3,IPD harmonic amplitude
+ipd_frac_multi,0.0,,Gaia DR3,no multi-peak

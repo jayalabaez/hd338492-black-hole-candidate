@@ -1,0 +1,37 @@
+{
+  "teff_spt": 10500,
+  "teff_phot": 5376,
+  "simbad_sptype": "B9",
+  "E_BP_RP": 1.189,
+  "A_G": 2.2472,
+  "A_V": 2.8482,
+  "M_G_raw": 0.493,
+  "M_G_corrected": -1.754,
+  "chi2_red_uncorrected": 285.39,
+  "chi2_red_dereddened": 14.11,
+  "improvement_factor": 20.2,
+  "bands": [
+    "G",
+    "BP",
+    "RP",
+    "J",
+    "H",
+    "Ks",
+    "W1",
+    "W2",
+    "W3",
+    "W4"
+  ],
+  "residuals_sigma": [
+    -4.77,
+    -0.42,
+    -5.77,
+    -0.88,
+    3.44,
+    3.38,
+    3.47,
+    1.35,
+    1.99,
+    3.86
+  ]
+}

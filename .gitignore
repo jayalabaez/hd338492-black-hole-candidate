@@ -1,0 +1,10 @@
+# .gitignore — HD 338492 BH Candidate Repository
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+dist/
+build/
+.DS_Store
+Thumbs.db
+*.log
