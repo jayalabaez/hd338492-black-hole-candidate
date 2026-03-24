@@ -209,17 +209,17 @@ def fig6_confirmation_checklist():
     checks = [
         ('C1: Gaia quality', 'PASS', 'RUWE=2.05, σ=249.1'),
         ('C2: Orbit solution', 'PASS', 'P=44.41d, e=0.007, K₁=80.4'),
-        ('C3: Mass function', 'PASS', 'f(M)=2.39 > 0.5'),
+        ('C3: Mass function', 'PASS', 'f(M)=2.39 > Chandrasekhar'),
         ('C4: Spectral type', 'PASS', 'B9 → Teff=10500 K'),
         ('C5: HR diagram', 'PASS', 'M₁=4.40 on MS'),
-        ('C6: Extinction', 'PASS', 'A_V=2.85, resolved'),
-        ('C7: SED fit', 'PASS', 'χ²=14.1 (dereddened)'),
+        ('C6: Extinction', 'OPEN', 'A_V=2.85 (SpT-dependent)'),
+        ('C7: SED fit', 'OPEN', 'χ²=14.1 (BB approx)'),
         ('C8: Companion light', 'PASS', '419× exclusion'),
         ('C9: X-ray', 'OPEN', 'Non-detection (dormant)'),
         ('C10: UV excess', 'OPEN', 'No GALEX coverage'),
         ('C11: Mass posterior', 'PASS', 'P(BH)=98.5%'),
-        ('C12: Alt. scenarios', 'PASS', '5/6 excluded'),
-        ('C13: Final verdict', 'PASS', 'COMPELLING'),
+        ('C12: Alt. scenarios', 'FAIL', '2/6 not fully excluded'),
+        ('C13: Independent RV', 'FAIL', 'Not yet obtained'),
     ]
 
     fig, ax = plt.subplots(figsize=(9, 7))

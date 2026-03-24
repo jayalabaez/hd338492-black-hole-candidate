@@ -1,7 +1,7 @@
 # HD 338492 — Compelling Black Hole Candidate from Gaia DR3
 
 > **Joel Ayala-Baez** | Independent Researcher  
-> Paper status: Submitted / Under review
+> Paper status: Pre-submission draft
 
 ## Summary
 
@@ -21,7 +21,7 @@ HD 338492 (Gaia DR3 2021374066702077312) is a single-lined spectroscopic binary 
 | P(BH) | 98.5% |
 | Companion light | Excluded (419× threshold) |
 | X-ray | Non-detection (dormant) |
-| Alternative scenarios | 5/6 excluded, 1 disfavoured |
+| Alternative scenarios | 4/6 excluded, 2 constrained |
 
 ## Repository Structure
 
