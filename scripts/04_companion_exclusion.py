@@ -232,7 +232,7 @@ def main():
     print(f'\n  ✅ LUMINOUS COMPANION EXCLUDED')
     print(f'     M2_min ({M2_MIN}) > max-hidden ({max_hidden}) by '
           f'{M2_MIN - max_hidden:.1f} Msun')
-    print(f'     419× the detection threshold')
+    print(f'     {bol_ratio*100/DETECTION_THRESHOLD:.0f}× the detection threshold')
     print(f'     → COMPANION MUST BE DARK')
 
     print('\n=== Companion exclusion complete ===')

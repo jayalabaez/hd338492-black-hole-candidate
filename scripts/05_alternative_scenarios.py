@@ -28,7 +28,7 @@ E_ORBIT = 0.007
 K1 = 80.355              # km/s
 RUWE = 2.05
 SIG_AMP = 249.1          # astrometric_excess_noise_sig
-P_BH_MC = 0.985          # from MC posterior
+P_BH_MC = 0.997          # from MC posterior
 
 
 def test_ms_companion():
@@ -41,12 +41,12 @@ def test_ms_companion():
         'M2_required': M2_MIN,
         'expected_L': 1048,  # Lsun
         'expected_Teff': 17366,
-        'flux_ratio_pct': 419.6,
+        'flux_ratio_pct': 943.3,
         'detection_threshold_pct': 1.0,
-        'excess_factor': 419,
+        'excess_factor': 943,
         'verdict': 'EXCLUDED',
-        'reason': (f'6.62 Msun MS star would contribute 419% of total '
-                   f'flux — 419x the detection threshold. No secondary '
+        'reason': (f'6.62 Msun MS star would contribute 943% of primary '
+                   f'flux — 943x the detection threshold. No secondary '
                    f'SED component is seen in any band.'),
     }
 
@@ -220,11 +220,11 @@ def main():
             HD 338492 satisfies all requirements for a compelling BH candidate:
             - Dynamical M2_min = 6.62 Msun (above NS/WD ceilings)
             - f(M) = 2.39 Msun alone exceeds Chandrasekhar limit
-            - No luminous companion detected (419x exclusion)
+            - No luminous companion detected (943x exclusion)
             - No X-ray emission (consistent with dormant BH)
             - Gaia NSS solution is robust (σ = 249.1)
             - 5/6 alternative scenarios fully excluded
-            - MC P(BH) = 98.5% with conservative priors
+            - MC P(BH) = 99.7% with conservative priors
 
             Confirmation requires 8-10 ground-based RV epochs
             over ~2 months to independently verify the orbit.

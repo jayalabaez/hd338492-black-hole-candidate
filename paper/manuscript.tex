@@ -233,10 +233,12 @@ discrepancy between the spectroscopic $T_\mathrm{eff}$ (10\,500\,K
 from B9) and the photometric $T_\mathrm{eff}$ inferred from the
 observed $G_\mathrm{BP} - G_\mathrm{RP}$ colour ($\sim$5400\,K) to
 derive the colour excess:
-\begin{equation}
-E(G_\mathrm{BP} - G_\mathrm{RP}) = (G_\mathrm{BP} - G_\mathrm{RP})_\mathrm{obs}
-    - (G_\mathrm{BP} - G_\mathrm{RP})_0 = 1.039 - (-0.15) = 1.189\,\text{mag}\,,
-\end{equation}
+\begin{align}
+E(G_\mathrm{BP} {-} G_\mathrm{RP})
+  &= (G_\mathrm{BP} {-} G_\mathrm{RP})_\mathrm{obs}
+     - (G_\mathrm{BP} {-} G_\mathrm{RP})_0 \notag\\
+  &= 1.039 - (-0.15) = 1.189\,\text{mag}\,,
+\end{align}
 yielding $A_G = 2.247$\,mag and $A_V \approx 2.85$\,mag
 via the \citet{Cardelli1989} extinction law with $R_V = 3.1$.
 
@@ -661,7 +663,7 @@ $K_1$ ($\kms$)         & 65.9    & 4.6     & 4.5      & 80.4    \\
 $\fmass$ ($\Msun$)        & 3.96    & 0.37    & 3.57     & 2.39    \\
 $M_1$ ($\Msun$)        & 0.93    & 1.07    & 0.76     & 4.40    \\
 $M_2$ ($\Msun$)        & 9.62    & 8.94    & 32.70    & $>$6.62 \\
-$P(\text{BH})$         & Confirmed & Confirmed & Confirmed & 99.7\% \\
+$P(\text{BH})$         & ---       & ---       & ---       & 99.7\% \\
 Status                 & Confirmed & Confirmed & Confirmed & Candidate \\
 \bottomrule
 \end{tabular}
@@ -680,9 +682,9 @@ and WISE.  \textit{Right:} Summary of key system properties.}
 \label{fig:overview}
 \end{figure*}
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{figures/fig_mass_posterior.pdf}
-\caption{\textit{Top:} Minimum companion mass $M_{2,\min}$ as a
+\begin{figure*}
+\includegraphics[width=\textwidth]{figures/fig_mass_posterior.pdf}
+\caption{\textit{Left:} Minimum companion mass $M_{2,\min}$ as a
 function of assumed primary mass $M_1$.  The dashed lines mark the
 adopted $M_1 = 4.40\,\Msun$ and the resulting
 $M_{2,\min} = 6.62\,\Msun$.  \textit{Bottom:} Monte~Carlo
@@ -691,10 +693,10 @@ inclination and log-normal $M_1$ priors.  The shaded blue region
 marks $M_2 > 5\,\Msun$ (BH regime); the integrated probability is
 $P(\text{BH}) = 99.7$~per~cent.}
 \label{fig:posterior}
-\end{figure}
+\end{figure*}
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{figures/fig_sed_extinction.pdf}
+\begin{figure*}
+\includegraphics[width=\textwidth]{figures/fig_sed_extinction.pdf}
 \caption{Spectral energy distribution of HD~338492.  \textit{Top:}
 Observed photometry compared to a 10\,500\,K blackbody --- the
 SED is strongly reddened ($\chi^2 \approx 285$).  \textit{Bottom:}
@@ -702,10 +704,10 @@ Dereddened photometry ($A_V = 2.85$) compared to the same model ---
 $\chi^2 \approx 14$, a 20-fold improvement.  No secondary SED
 component is required.}
 \label{fig:sed}
-\end{figure}
+\end{figure*}
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{figures/fig_companion_exclusion.pdf}
+\begin{figure*}
+\includegraphics[width=\textwidth]{figures/fig_companion_exclusion.pdf}
 \caption{\textit{Left:} Expected companion-to-primary flux ratio
 in each photometric band for a hypothetical $6.62\,\Msun$ MS
 companion.  All bands exceed the 1~per~cent detection threshold.
@@ -713,10 +715,10 @@ companion.  All bands exceed the 1~per~cent detection threshold.
 The detectable mass threshold is $\sim$\,$1.4\,\Msun$, far below
 $M_{2,\min} = 6.62\,\Msun$.}
 \label{fig:companion}
-\end{figure}
+\end{figure*}
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{figures/fig5_cmd_hrd.pdf}
+\begin{figure*}
+\includegraphics[width=\textwidth]{figures/fig5_cmd_hrd.pdf}
 \caption{\textit{Left:} Colour--magnitude diagram showing
 HD~338492 before (red) and after (blue) extinction correction.
 The green arrow indicates the reddening vector ($A_V = 2.85$).
@@ -724,10 +726,10 @@ The green arrow indicates the reddening vector ($A_V = 2.85$).
 dereddened position is consistent with a B9 main-sequence star
 of $\sim$\,$4.4\,\Msun$.}
 \label{fig:cmd_hrd}
-\end{figure}
+\end{figure*}
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{figures/fig6_confirmation_checklist.pdf}
+\begin{figure*}
+\includegraphics[width=0.85\textwidth]{figures/fig6_confirmation_checklist.pdf}
 \caption{Confirmation checklist for HD~338492, showing the outcome
 of each diagnostic test.  Green circles indicate PASS, orange
 indicates OPEN (inconclusive), red indicates FAIL (not yet
@@ -735,7 +737,7 @@ satisfied).  The system scores 7P/4O/2F ---
 a ``compelling'' BH candidate requiring follow-up to close the
 two remaining failures (independent RV and full scenario exclusion).}
 \label{fig:checklist}
-\end{figure}
+\end{figure*}
 
 \label{lastpage}
 \end{document}

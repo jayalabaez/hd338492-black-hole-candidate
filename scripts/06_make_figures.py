@@ -47,7 +47,7 @@ P_ORB = 44.41  # days
 E_ORB = 0.007
 K1 = 80.355  # km/s
 FM = 2.3927
-P_BH = 0.985
+P_BH = 0.997
 A_V = 2.85
 
 PHOTOMETRY = {
@@ -214,10 +214,10 @@ def fig6_confirmation_checklist():
         ('C5: HR diagram', 'PASS', 'M₁=4.40 on MS'),
         ('C6: Extinction', 'OPEN', 'A_V=2.85 (SpT-dependent)'),
         ('C7: SED fit', 'OPEN', 'χ²=14.1 (BB approx)'),
-        ('C8: Companion light', 'PASS', '419× exclusion'),
+        ('C8: Companion light', 'PASS', '943× exclusion'),
         ('C9: X-ray', 'OPEN', 'Non-detection (dormant)'),
         ('C10: UV excess', 'OPEN', 'No GALEX coverage'),
-        ('C11: Mass posterior', 'PASS', 'P(BH)=98.5%'),
+        ('C11: Mass posterior', 'PASS', 'P(BH)=99.7%'),
         ('C12: Alt. scenarios', 'FAIL', '2/6 not fully excluded'),
         ('C13: Independent RV', 'FAIL', 'Not yet obtained'),
     ]
