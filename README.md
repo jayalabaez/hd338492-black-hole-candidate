@@ -18,8 +18,8 @@ HD 338492 (Gaia DR3 2021374066702077312) is a single-lined spectroscopic binary 
 | f(M) | 2.39 M☉ (exceeds Chandrasekhar limit) |
 | M₁ (primary) | 4.40 ± 1.32 M☉ |
 | M₂,min (companion) | 6.62 M☉ |
-| P(BH) | 98.5% |
-| Companion light | Excluded (419× threshold) |
+| P(BH) | 99.7% |
+| Companion light | Excluded (943× threshold) |
 | X-ray | Non-detection (dormant) |
 | Alternative scenarios | 4/6 excluded, 2 constrained |
 

@@ -31,8 +31,8 @@ M1_CAT = 3.16      # catalogue value for comparison
 
 # ─── mass function ───────────────────────────────────────────────────
 N_DRAWS = 200_000
-NS_MAX = 3.0       # Msun
-BH_THRESHOLD = 5.0 # Msun
+NS_MAX = 3.0       # Msun — conservative NS ceiling
+BH_THRESHOLD = 5.0 # Msun — upper edge of mass gap
 
 
 def mass_function(P, K1, e):
@@ -103,6 +103,7 @@ def main():
     ci68 = np.percentile(m2_draws, [16, 84])
     ci90 = np.percentile(m2_draws, [5, 95])
     p_bh = 100 * np.mean(m2_draws > BH_THRESHOLD)
+    p_above_ns = 100 * np.mean(m2_draws > NS_MAX)
     p_mg = 100 * np.mean((m2_draws > NS_MAX) & (m2_draws <= BH_THRESHOLD))
     p_ns = 100 * np.mean(m2_draws <= NS_MAX)
 
@@ -110,6 +111,7 @@ def main():
     print(f'    M2 median     = {median:.2f} Msun')
     print(f'    68% CI        = [{ci68[0]:.2f}, {ci68[1]:.2f}] Msun')
     print(f'    90% CI        = [{ci90[0]:.2f}, {ci90[1]:.2f}] Msun')
+    print(f'    P(>NS ceiling) = {p_above_ns:.1f}%')
     print(f'    P(BH > 5)     = {p_bh:.1f}%')
     print(f'    P(mass gap)   = {p_mg:.1f}%')
     print(f'    P(NS)         = {p_ns:.1f}%')
@@ -129,6 +131,7 @@ def main():
         'M2_median': round(median, 2),
         'M2_68ci': [round(ci68[0], 2), round(ci68[1], 2)],
         'M2_90ci': [round(ci90[0], 2), round(ci90[1], 2)],
+        'P_above_NS_percent': round(p_above_ns, 1),
         'P_BH_percent': round(p_bh, 1),
         'P_massgap_percent': round(p_mg, 1),
         'P_NS_percent': round(p_ns, 1),

@@ -17,7 +17,7 @@
 \newcommand{\Lsun}{{\rm L}_\odot}
 \newcommand{\Rsun}{{\rm R}_\odot}
 \newcommand{\kms}{{\rm km\,s}^{-1}}
-\newcommand{\fm}{f(M)}
+\newcommand{\fmass}{f(M)}
 
 \title[HD~338492: A Compelling Black Hole Candidate]
 {HD~338492 as a Compelling Black Hole Candidate\\
@@ -47,16 +47,16 @@ harbouring a compelling black hole candidate companion.  The system
 has an orbital period $P = 44.41$\,d, eccentricity $e = 0.007$, and
 radial-velocity semi-amplitude $K_1 = 80.4$\,$\kms$, yielding a
 spectroscopic mass function
-$\fm = 2.39\,\Msun$ --- above the Chandrasekhar limit from
+$\fmass = 2.39\,\Msun$ --- above the Chandrasekhar limit from
 dynamics alone, independent of any stellar model.  Cross-matching
 with SIMBAD spectral classification (B9), 2MASS, WISE, and ROSAT/XMM
 archival data, we derive an extinction-corrected primary mass
 $M_1 = 4.40 \pm 1.32\,\Msun$ and a minimum companion mass
 $M_{2,\min} = 6.62\,\Msun$.  A Monte~Carlo posterior with isotropic
-inclination priors gives $P(\text{BH}) = 98.5$~per~cent.  No luminous
+inclination priors gives $P(\text{BH}) = 99.7$~per~cent.  No luminous
 companion is detected in any photometric band: a main-sequence star
-of the required mass would contribute $>$\,419~per~cent of the system
-flux, exceeding the detection threshold by a factor of $419$.  ROSAT
+of the required mass would contribute $>$\,943~per~cent of the system
+flux, exceeding the detection threshold by a factor of $943$.  ROSAT
 and XMM non-detections are consistent with a dormant (non-accreting)
 black hole.  We systematically evaluate six alternative scenarios:
 four (main-sequence companion, white dwarf, neutron star, astrometric
@@ -96,11 +96,11 @@ transformed the search for these dormant BHs.  The non-single-star
 (NSS) catalogue \citep{GaiaNSS2023} provides orbital solutions for
 $\sim$\,180\,000 spectroscopic binaries, including single-lined
 systems (SB1) where only the primary's radial-velocity variation is
-detected.  When the spectroscopic mass function $\fm$ is
+detected.  When the spectroscopic mass function $\fmass$ is
 sufficiently large and no luminous companion contributes to the
 spectral energy distribution (SED), the companion must be dark ---
 and if its minimum mass exceeds the neutron-star ceiling
-($\sim$2.3\,\Msun; \citealt{Rezzolla2018}), a BH becomes the
+($\sim 2.3\,\Msun$; \citealt{Rezzolla2018}), a BH becomes the
 natural explanation.
 
 This approach has already yielded the landmark discoveries of
@@ -117,7 +117,7 @@ based on a systematic multi-wavelength confirmation analysis.  The
 system lies in the Galactic plane ($l = 59.3\degr$, $b = 3.0\degr$)
 at a distance of $\sim$812\,pc and is classified as spectral type
 B9 in SIMBAD \citep{Wenger2000}.  Its orbital solution implies a
-mass function $\fm = 2.39\,\Msun$ and a minimum companion mass of
+mass function $\fmass = 2.39\,\Msun$ and a minimum companion mass of
 $6.62\,\Msun$ --- well above the BH threshold.
 
 The paper is structured as follows.  Section~\ref{sec:data}
@@ -196,7 +196,7 @@ anchor for the extinction and primary-mass analyses that follow.
 The spectroscopic mass function is computed from the NSS orbital
 elements:
 \begin{equation}
-\fm \;=\; \frac{(1 - e^2)^{3/2}\, K_1^3\, P}{2\pi\, G}
+\fmass \;=\; \frac{(1 - e^2)^{3/2}\, K_1^3\, P}{2\pi\, G}
      \;=\; 2.3927\,\Msun \,,
 \label{eq:fm}
 \end{equation}
@@ -209,7 +209,7 @@ on the companion mass \emph{independent of any stellar model}.
 The minimum companion mass $M_{2,\min}$ is obtained by solving the
 cubic mass-function equation at edge-on inclination ($i = 90\degr$):
 \begin{equation}
-\fm \;=\; \frac{M_2^3\, \sin^3 i}{(M_1 + M_2)^2} \,.
+\fmass \;=\; \frac{M_2^3\, \sin^3 i}{(M_1 + M_2)^2} \,.
 \label{eq:fm_cubic}
 \end{equation}
 
@@ -274,8 +274,8 @@ mass, marginalising over:
 \end{enumerate}
 For each draw, $M_2$ is obtained by numerically solving
 equation~(\ref{eq:fm_cubic}) via Brent's method.  The fraction of
-draws with $M_2 > 3\,\Msun$ (conservative NS ceiling) gives the
-posterior probability $P(\text{BH})$.
+draws with $M_2 > 5\,\Msun$ (upper edge of the neutron-star/black-hole
+mass gap) gives the posterior probability $P(\text{BH})$.
 
 \subsection{Companion-light exclusion}
 \label{sec:methods:companion}
@@ -296,10 +296,10 @@ in any band.
 
 Table~\ref{tab:observed} summarises the observed and derived
 properties of HD~338492.  The mass function
-$\fm = 2.3927\,\Msun$ is among the highest in the DR3 NSS SB1
+$\fmass = 2.3927\,\Msun$ is among the highest in the DR3 NSS SB1
 catalogue.  With $M_1 = 4.40\,\Msun$, the minimum companion mass
 (at $i = 90\degr$) is $M_{2,\min} = 6.62\,\Msun$ --- well above
-the BH threshold of $\sim$\,3\,\Msun.
+the BH threshold of $\sim 3\,\Msun$.
 
 The near-zero eccentricity ($e = 0.007$) is notable.  For the
 observed period, tidal circularisation timescales are
@@ -329,11 +329,11 @@ optical or infrared wavelengths.
 \label{sec:results:companion}
 
 A main-sequence star of $M_2 = 6.62\,\Msun$ would have
-$L \approx 1048\,\Lsun$ and $T_\mathrm{eff} \approx 17\,400$\,K,
-contributing $\sim$\,420~per~cent of the total system flux ---
+$L \approx 2356\,\Lsun$ and $T_\mathrm{eff} \approx 17\,000$\,K,
+contributing $\sim$\,943~per~cent of the primary flux ---
 overwhelmingly detectable in every band from the optical to the
 mid-infrared.  The maximum MS mass that could remain hidden in the
-photometry is $\sim$\,1.2\,\Msun, a factor of 5.5 below
+photometry is $\sim 1.4\,\Msun$, a factor of 4.9 below
 $M_{2,\min}$ (Fig.~\ref{fig:companion}).
 
 \textbf{The companion must therefore be dark.}
@@ -342,8 +342,8 @@ $M_{2,\min}$ (Fig.~\ref{fig:companion}).
 \label{sec:results:posterior}
 
 The Monte~Carlo posterior (Fig.~\ref{fig:posterior}) yields a median
-companion mass $\tilde{M}_2 = 8.7\,\Msun$ (5th--95th percentile:
-6.6 -- 18.4\,$\Msun$) and $P(\text{BH}) = 98.5$~per~cent.  Even at
+companion mass $\tilde{M}_2 = 8.6\,\Msun$ (68~per~cent CI:
+6.5 -- 21.2\,$\Msun$) and $P(\text{BH}) = 99.7$~per~cent.  Even at
 the most conservative end of the $M_1$ prior (low primary mass), the
 companion remains above the NS ceiling.
 
@@ -355,12 +355,12 @@ We systematically evaluate six non-BH explanations for the dark
 companion.  Table~\ref{tab:scenarios} summarises the results.
 
 \paragraph{Main-sequence companion.}
-A $6.62\,\Msun$ MS star would contribute $>$\,419~per~cent of the
-total flux and is \textbf{excluded} by the photometric
+A $6.62\,\Msun$ MS star would contribute $>$\,943~per~cent of the
+primary flux and is \textbf{excluded} by the photometric
 non-detection (Section~\ref{sec:results:companion}).
 
 \paragraph{White dwarf.}
-$\fm = 2.39\,\Msun$ alone exceeds the Chandrasekhar limit
+$\fmass = 2.39\,\Msun$ alone exceeds the Chandrasekhar limit
 ($1.44\,\Msun$); a WD companion is \textbf{excluded} on
 dynamical grounds.
 
@@ -500,7 +500,7 @@ Gaia~DR3 single-lined spectroscopic binary with one of the highest
 mass functions in the NSS catalogue.  Our principal findings are:
 
 \begin{enumerate}
-\item The spectroscopic mass function $\fm = 2.39\,\Msun$ exceeds
+\item The spectroscopic mass function $\fmass = 2.39\,\Msun$ exceeds
   the Chandrasekhar limit from dynamics alone, independent of any
   stellar model.
   
@@ -511,10 +511,10 @@ mass functions in the NSS catalogue.  Our principal findings are:
   
 \item No luminous companion is detected: a MS star of the required
   mass would exceed the photometric detection threshold by a
-  factor of 419.  The companion is dark.
+  factor of 943.  The companion is dark.
   
 \item A Monte~Carlo mass posterior with isotropic inclination
-  priors gives $P(\text{BH}) = 98.5$~per~cent.
+  priors gives $P(\text{BH}) = 99.7$~per~cent.
   
 \item Four of six alternative non-BH scenarios are firmly excluded.
   The hierarchical triple is strongly constrained but not fully
@@ -618,9 +618,9 @@ $A_V$                  & 2.85 mag            & 0.3      & Colour excess \\
 $E(G_\mathrm{BP} - G_\mathrm{RP})$ & 1.189 mag & 0.1 & SpT anchor \\
 $M_G$ (corrected)      & $-1.71$ mag         & 0.3      & Derived \\
 $M_1$ (primary mass)   & 4.40 $\Msun$        & 1.32     & HRD placement \\
-$\fm$ (mass function)  & 2.3927 $\Msun$      & 0.04     & Eq.~(\ref{eq:fm}) \\
+$\fmass$ (mass function)  & 2.3927 $\Msun$      & 0.04     & Eq.~(\ref{eq:fm}) \\
 $M_{2,\min}$           & 6.62 $\Msun$        & ---      & Eq.~(\ref{eq:fm_cubic}) \\
-$P(\text{BH})$         & 98.5\%              & ---      & MC posterior \\
+$P(\text{BH})$         & 99.7\%              & ---      & MC posterior \\
 \bottomrule
 \end{tabular}
 \end{table*}
@@ -633,8 +633,8 @@ $P(\text{BH})$         & 98.5\%              & ---      & MC posterior \\
 \toprule
 Scenario & Verdict & Key constraint \\
 \midrule
-MS companion     & Excluded     & 419$\times$ flux excess \\
-White dwarf      & Excluded     & $\fm > M_\mathrm{Ch}$ \\
+MS companion     & Excluded     & 943$\times$ flux excess \\
+White dwarf      & Excluded     & $\fmass > M_\mathrm{Ch}$ \\
 Neutron star     & Excluded     & $M_{2,\min} = 2.9 M_\mathrm{TOV}$ \\
 Triple system    & Unlikely     & Stability + photometry \\
 Stripped He star & Disfavoured  & No UV excess \\
@@ -642,6 +642,30 @@ Artefact         & Excluded     & $\sigma = 249.1$ \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\begin{table*}
+\centering
+\caption{Comparison of HD~338492 with the three confirmed Gaia dormant
+black hole systems.  Gaia~BH1, BH2 and BH3 values are from
+\citet{ElBadry2023a}, \citet{ElBadry2023b} and \citet{GaiaBH3_2024},
+respectively.  HD~338492 remains at the candidate stage pending
+independent RV confirmation.}
+\label{tab:comparison}
+\begin{tabular}{lcccc}
+\toprule
+Property & Gaia~BH1 & Gaia~BH2 & Gaia~BH3 & HD~338492 \\
+\midrule
+$P$ (d)                & 185.6   & 1277    & 11.6\,yr & 44.41   \\
+$e$                    & 0.45    & 0.52    & 0.73     & 0.007   \\
+$K_1$ ($\kms$)         & 65.9    & 4.6     & 4.5      & 80.4    \\
+$\fmass$ ($\Msun$)        & 3.96    & 0.37    & 3.57     & 2.39    \\
+$M_1$ ($\Msun$)        & 0.93    & 1.07    & 0.76     & 4.40    \\
+$M_2$ ($\Msun$)        & 9.62    & 8.94    & 32.70    & $>$6.62 \\
+$P(\text{BH})$         & Confirmed & Confirmed & Confirmed & 99.7\% \\
+Status                 & Confirmed & Confirmed & Confirmed & Candidate \\
+\bottomrule
+\end{tabular}
+\end{table*}
 
 % ====================================================================
 %  FIGURES
@@ -664,8 +688,8 @@ adopted $M_1 = 4.40\,\Msun$ and the resulting
 $M_{2,\min} = 6.62\,\Msun$.  \textit{Bottom:} Monte~Carlo
 posterior distribution of $M_2$ from 200\,000 draws with isotropic
 inclination and log-normal $M_1$ priors.  The shaded blue region
-marks $M_2 > 3\,\Msun$ (BH regime); the integrated probability is
-$P(\text{BH}) = 98.5$~per~cent.}
+marks $M_2 > 5\,\Msun$ (BH regime); the integrated probability is
+$P(\text{BH}) = 99.7$~per~cent.}
 \label{fig:posterior}
 \end{figure}
 
@@ -686,7 +710,7 @@ component is required.}
 in each photometric band for a hypothetical $6.62\,\Msun$ MS
 companion.  All bands exceed the 1~per~cent detection threshold.
 \textit{Right:} Maximum flux ratio as a function of companion mass.
-The detectable mass threshold is $\sim$\,$1.2\,\Msun$, far below
+The detectable mass threshold is $\sim$\,$1.4\,\Msun$, far below
 $M_{2,\min} = 6.62\,\Msun$.}
 \label{fig:companion}
 \end{figure}
