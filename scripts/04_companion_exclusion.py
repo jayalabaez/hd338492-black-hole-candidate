@@ -46,6 +46,25 @@ FILTERS = {
 }
 DETECTION_THRESHOLD = 0.01  # 1% of primary flux
 
+# ── Castelli–Kurucz correction factors (from 02b) ────────────────────
+CK_TEFF_GRID = np.array([8000, 9000, 9500, 10000, 10500, 11000, 11500,
+                          12000, 13000, 15000])
+CK_CORRECTIONS = {
+    'BP': np.array([0.86, 0.87, 0.88, 0.89, 0.90, 0.91, 0.92, 0.93, 0.94, 0.96]),
+    'G':  np.array([0.93, 0.94, 0.95, 0.96, 0.96, 0.97, 0.97, 0.97, 0.98, 0.98]),
+    'RP': np.array([0.97, 0.97, 0.97, 0.97, 0.97, 0.97, 0.98, 0.98, 0.98, 0.99]),
+    'J':  np.array([0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 1.00]),
+    'H':  np.array([0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 1.00]),
+    'Ks': np.array([0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 0.99, 1.00]),
+}
+
+
+def ck_factor(band, Teff):
+    """CK correction factor for band at given Teff."""
+    if band not in CK_CORRECTIONS:
+        return 1.0
+    return float(np.interp(Teff, CK_TEFF_GRID, CK_CORRECTIONS[band]))
+
 
 def ms_luminosity(M):
     """Main-sequence luminosity from Eker+2018 piecewise relation."""
@@ -89,17 +108,19 @@ def planck_ratio(T1, T2, lam_um):
 
 
 def compute_flux_ratios(m_comp, teff_prim, l_prim):
-    """Compute companion/primary flux ratios in each band."""
+    """Compute companion/primary flux ratios with CK corrections."""
     l_comp = ms_luminosity(m_comp)
     t_comp = ms_teff(m_comp)
 
     bol_ratio = l_comp / l_prim
     ratios = {}
     for band, filt in FILTERS.items():
-        # F_comp/F_prim = (L_comp/L_prim) × B_ν(T_comp)/B_ν(T_prim)
-        # but B_ν ratio includes the spectral shape difference
         r_planck = planck_ratio(teff_prim, t_comp, filt['lam'])
-        ratios[band] = bol_ratio * r_planck
+        # Apply CK correction: model atmosphere vs blackbody
+        ck_prim = ck_factor(band, teff_prim)
+        ck_comp = ck_factor(band, t_comp)
+        ck_ratio = ck_comp / ck_prim if ck_prim > 0 else 1.0
+        ratios[band] = bol_ratio * r_planck * ck_ratio
 
     return ratios, l_comp, t_comp, bol_ratio
 

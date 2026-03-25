@@ -210,19 +210,22 @@ def fig6_confirmation_checklist():
         ('C1: Gaia quality', 'PASS', 'RUWE=2.05, σ=249.1'),
         ('C2: Orbit solution', 'PASS', 'P=44.41d, e=0.007, K₁=80.4'),
         ('C3: Mass function', 'PASS', 'f(M)=2.39 > Chandrasekhar'),
-        ('C4: Spectral type', 'PASS', 'B9 → Teff=10500 K'),
+        ('C4: Spectral type', 'OPEN', 'SIMBAD B9 (no independent SpT)'),
         ('C5: HR diagram', 'PASS', 'M₁=4.40 on MS'),
         ('C6: Extinction', 'OPEN', 'A_V=2.85 (SpT-dependent)'),
-        ('C7: SED fit', 'OPEN', 'χ²=14.1 (BB approx)'),
-        ('C8: Companion light', 'PASS', '943× exclusion'),
+        ('C7: SED fit', 'OPEN', 'χ²_ν=10.9 (ATLAS9-corrected)'),
+        ('C8: Companion light', 'PASS', '94329× exclusion (CK-corr)'),
         ('C9: X-ray', 'OPEN', 'Non-detection (dormant)'),
-        ('C10: UV excess', 'OPEN', 'No GALEX coverage'),
+        ('C10: UV coverage', 'OPEN', 'No GALEX coverage (outside ftp)'),
         ('C11: Mass posterior', 'PASS', 'P(BH)=99.7%'),
-        ('C12: Alt. scenarios', 'FAIL', '2/6 not fully excluded'),
+        ('C12: Alt. scenarios', 'FAIL', '2/6 not fully closed'),
         ('C13: Independent RV', 'FAIL', 'Not yet obtained'),
+        ('C14: Variability', 'PASS', 'No VSX/ASAS-SN/ZTF/TESS flags'),
+        ('C15: Literature veto', 'PASS', 'No SB2/EB/triple flags'),
+        ('C16: Contamination', 'PASS', 'No bright neighbour (<5 mag)'),
     ]
 
-    fig, ax = plt.subplots(figsize=(9, 7))
+    fig, ax = plt.subplots(figsize=(9, 8.5))
     ax.axis('off')
     ax.set_xlim(0, 10)
     ax.set_ylim(-len(checks) - 0.5, 1.5)
@@ -237,7 +240,7 @@ def fig6_confirmation_checklist():
 
     for i, (name, status, detail) in enumerate(checks):
         y = -i
-        ax.text(0.5, y, name, fontsize=10, va='center')
+        ax.text(0.5, y, name, fontsize=9, va='center')
 
         colour = colours.get(status, 'grey')
         circle = Circle((4.0, y), 0.25, facecolor=colour,
@@ -246,7 +249,7 @@ def fig6_confirmation_checklist():
         ax.text(4.0, y, status[0], fontsize=8, fontweight='bold',
                 ha='center', va='center', color='white')
 
-        ax.text(5.5, y, detail, fontsize=9, va='center')
+        ax.text(5.5, y, detail, fontsize=8, va='center')
 
     # Summary box
     n_pass = sum(1 for _, s, _ in checks if s == 'PASS')
@@ -256,8 +259,8 @@ def fig6_confirmation_checklist():
     ax.axhline(y_bot + 0.5, color='black', lw=1.5, xmin=0.02, xmax=0.98)
     ax.text(0.5, y_bot - 0.3,
             f'Score: {n_pass}P / {n_open}O / {n_fail}F — '
-            f'Verdict: STRONG BH CANDIDATE (requires RV confirmation)',
-            fontsize=12, fontweight='bold', color='#27ae60')
+            f'BH CANDIDATE (pending RV confirmation)',
+            fontsize=11, fontweight='bold', color='#2c3e50')
 
     fig.suptitle('HD 338492 — Confirmation Checklist',
                  fontsize=14, fontweight='bold')

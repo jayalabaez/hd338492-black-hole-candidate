@@ -1,0 +1,185 @@
+{
+  "target": "HD 338492",
+  "source_id": 2021374066702077312,
+  "ra": 292.72283804,
+  "dec": 24.75113317,
+  "checks": {
+    "C14_variability": {
+      "check_id": "C14",
+      "check_name": "External variability audit",
+      "sources_checked": [
+        {
+          "survey": "VSX (AAVSO)",
+          "match": true,
+          "data": "{\"VSXObject\":[]}"
+        },
+        {
+          "survey": "ASAS-SN (VizieR II/366)",
+          "match": false,
+          "note": "No match within 30 arcsec"
+        },
+        {
+          "survey": "ZTF (VizieR II/372)",
+          "match": false,
+          "note": "No match within 30 arcsec"
+        },
+        {
+          "survey": "Gaia DR3 variability",
+          "data": "source_id,phot_variable_flag,classprob_dsc_combmod_star\n2021374066702077312,NOT_AVAILABLE,0.9999958\n"
+        },
+        {
+          "survey": "TESS Input Catalog (TICv8.2)",
+          "match": true,
+          "note": "TIC,RAJ2000,DEJ2000,HIP,TYC,UCAC4,2MASS,objID,WISEA,GAIA,APASS,KIC,S/G,Ref,r_Pos,pmRA,e_pmRA,pmDE,e_pmDE,r_pm,Plx,e_Plx,r_Plx,GLON,GLAT,ELON,ELAT,Bmag,e_Bmag,Vmag,e_Vmag,umag,e_umag,gmag,e_gmag,rmag,e_rmag,imag,e_imag,zmag,e_zmag,Jmag,e_Jmag,Hmag,e_Hmag,Kmag,e_Kmag,q_2MASS,W1mag,e_W1mag,W2mag,e_W2ma"
+        }
+      ],
+      "verdict": "PASS",
+      "summary": "No known variability classification in external catalogues (VSX, ASAS-SN, ZTF, Gaia)"
+    },
+    "C15_literature": {
+      "check_id": "C15",
+      "check_name": "Literature / classification veto",
+      "searches": [
+        {
+          "source": "SIMBAD",
+          "object_type": "Unknown",
+          "note": "Check for SB2, EB, triple, Be, etc. flags"
+        },
+        {
+          "source": "WDS",
+          "match": false,
+          "note": "Not in WDS within 60 arcsec"
+        },
+        {
+          "source": "SB9",
+          "match": false,
+          "note": "Not in SB9 catalogue"
+        }
+      ],
+      "vetoed": false,
+      "verdict": "PASS",
+      "summary": "SIMBAD type: Unknown. WDS match: False. SB9 match: False. No SB2/EB/triple/Be flags found."
+    },
+    "C16_neighbours": {
+      "check_id": "C16",
+      "check_name": "Neighbour / contamination audit",
+      "neighbours": [
+        {
+          "source_id": "2021373310793658880",
+          "G_mag": 20.84493,
+          "sep_arcsec": 3.3
+        },
+        {
+          "source_id": "2021374066702077568",
+          "G_mag": 16.409853,
+          "sep_arcsec": 3.4
+        },
+        {
+          "source_id": "2021374066659828224",
+          "G_mag": 17.973494,
+          "sep_arcsec": 4.9
+        },
+        {
+          "source_id": "2021374066659827072",
+          "G_mag": 20.117556,
+          "sep_arcsec": 5.1
+        },
+        {
+          "source_id": "2021374066659830016",
+          "G_mag": 18.796537,
+          "sep_arcsec": 5.3
+        },
+        {
+          "source_id": "2021373310745585664",
+          "G_mag": 19.426605,
+          "sep_arcsec": 6.1
+        },
+        {
+          "source_id": "2021374066659829888",
+          "G_mag": 18.160696,
+          "sep_arcsec": 7.5
+        },
+        {
+          "source_id": "2021374066663451904",
+          "G_mag": 20.50392,
+          "sep_arcsec": 7.7
+        },
+        {
+          "source_id": "2021374066702432256",
+          "G_mag": 20.183207,
+          "sep_arcsec": 8.0
+        },
+        {
+          "source_id": "2021373310745586816",
+          "G_mag": 18.668217,
+          "sep_arcsec": 8.7
+        },
+        {
+          "source_id": "2021374066702705280",
+          "G_mag": 21.085295,
+          "sep_arcsec": 8.8
+        },
+        {
+          "source_id": "2021373310745582720",
+          "G_mag": 20.72986,
+          "sep_arcsec": 9.5
+        },
+        {
+          "source_id": "2021373310748382336",
+          "G_mag": 20.311558,
+          "sep_arcsec": 10.0
+        }
+      ],
+      "twomass_blend_flag": true,
+      "n_gaia_within_10arcsec": 13,
+      "bright_contaminant": false,
+      "verdict": "PASS",
+      "summary": "13 Gaia source(s) within 10 arcsec. Bright contaminant: False. 2MASS blend: True."
+    }
+  },
+  "archival_spectra": {
+    "spectra_found": [
+      {
+        "survey": "LAMOST",
+        "match": false,
+        "data": "No match"
+      },
+      {
+        "survey": "RAVE DR6",
+        "match": false,
+        "data": "No match"
+      },
+      {
+        "survey": "GALAH DR3",
+        "match": false,
+        "data": "No match"
+      },
+      {
+        "survey": "APOGEE DR17",
+        "match": false,
+        "data": "No match"
+      }
+    ],
+    "any_spectra_found": false
+  },
+  "uv_archives": {
+    "uv_found": [
+      {
+        "survey": "GALEX GR6/7",
+        "match": false,
+        "note": "No GALEX detection (outside footprint)"
+      },
+      {
+        "survey": "Swift/UVOT SSC",
+        "match": false,
+        "note": "No Swift/UVOT detection"
+      },
+      {
+        "survey": "XMM-OM",
+        "match": false,
+        "note": "No XMM-OM detection"
+      }
+    ],
+    "any_uv_found": false
+  }
+}

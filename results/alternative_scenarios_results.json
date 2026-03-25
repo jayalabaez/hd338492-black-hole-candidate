@@ -52,13 +52,13 @@
       "test": "UV excess + spectral signature test",
       "M2_required": 6.62,
       "expected_Teff_stripped": "> 30000 K",
-      "GALEX_detection": "NO (non-detection)",
-      "UV_excess": "NONE observed",
+      "GALEX_detection": "NO COVERAGE (outside GALEX footprint)",
+      "UV_excess": "UNCONSTRAINED (no GALEX coverage)",
       "spectral_lines": "No He emission/absorption detected in SIMBAD",
       "mass_note": "A stripped star of 6.62 Msun would need to be the remnant of a very massive progenitor (> 25 Msun). Such objects are exceptionally rare.",
       "circular_orbit": "e = 0.007 is consistent with tidal circularisation in a post-MT system, but equally consistent with BH + MS.",
       "verdict": "DISFAVOURED",
-      "reason": "A 6.62 Msun stripped star at Teff > 30000 K would produce strong UV excess \u2014 none detected by GALEX. No He emission lines reported. While not fully excludable without UV spectroscopy, this scenario is energetically disfavoured."
+      "reason": "A 6.62 Msun stripped star at Teff > 30000 K would produce strong UV excess, but HD 338492 lies outside the GALEX footprint \u2014 UV is unconstrained. No He emission lines reported. This scenario cannot be closed without UV photometry or spectroscopy."
     },
     {
       "scenario": "Astrometric artefact",

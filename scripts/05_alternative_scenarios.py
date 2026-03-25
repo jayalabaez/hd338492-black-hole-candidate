@@ -8,7 +8,7 @@ Tests six scenarios:
   2. White dwarf          → EXCLUDED (M2_min > Chandrasekhar)
   3. Neutron star         → EXCLUDED (M2_min > TOV limit)
   4. Hierarchical triple  → UNLIKELY (stability constraint)
-  5. Stripped He star     → DISFAVOURED (no UV excess)
+  5. Stripped He star     → DISFAVOURED (UV unconstrained)
   6. Astrometric artefact → EXCLUDED (σ = 249.1)
 
 Outputs:
@@ -122,8 +122,8 @@ def test_stripped_star():
         'test': 'UV excess + spectral signature test',
         'M2_required': M2_MIN,
         'expected_Teff_stripped': '> 30000 K',
-        'GALEX_detection': 'NO (non-detection)',
-        'UV_excess': 'NONE observed',
+        'GALEX_detection': 'NO COVERAGE (outside GALEX footprint)',
+        'UV_excess': 'UNCONSTRAINED (no GALEX coverage)',
         'spectral_lines': 'No He emission/absorption detected in SIMBAD',
         'mass_note': ('A stripped star of 6.62 Msun would need to be '
                       'the remnant of a very massive progenitor '
@@ -133,10 +133,11 @@ def test_stripped_star():
                           'equally consistent with BH + MS.'),
         'verdict': 'DISFAVOURED',
         'reason': (f'A 6.62 Msun stripped star at Teff > 30000 K would '
-                   f'produce strong UV excess — none detected by GALEX. '
-                   f'No He emission lines reported. While not fully '
-                   f'excludable without UV spectroscopy, this scenario '
-                   f'is energetically disfavoured.'),
+                   f'produce strong UV excess, but HD 338492 lies outside '
+                   f'the GALEX footprint — UV is unconstrained. '
+                   f'No He emission lines reported. This scenario '
+                   f'cannot be closed without UV photometry or '
+                   f'spectroscopy.'),
     }
 
 

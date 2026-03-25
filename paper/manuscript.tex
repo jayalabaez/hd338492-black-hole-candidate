@@ -57,7 +57,7 @@ inclination, log-normal $M_1$ prior, BH threshold $> 5\,\Msun$), a
 Monte~Carlo posterior gives $P(\text{BH}) = 99.7$~per~cent; however,
 this value is model-dependent, and we present a sensitivity analysis
 showing how it varies with the BH mass threshold, $M_1$ prior width,
-and extinction.  No luminous companion is detected: a main-sequence
+spectral anchor (B8--A2), and extinction ($R_V = 2.5$--$4.0$).  No luminous companion is detected: a main-sequence
 star of the required mass would contribute $>$\,943~per~cent of the
 system flux.  ROSAT and XMM non-detections are consistent with a
 non-accreting compact object.  We evaluate six alternative scenarios:
@@ -248,22 +248,25 @@ via the \citet{Cardelli1989} extinction law with $R_V = 3.1$.
 \subsection{SED fitting}
 \label{sec:methods:sed}
 
-We fit a single-temperature blackbody to the dereddened photometry
-(Gaia + 2MASS + WISE) using the band-specific extinction ratios
-$A_\lambda / A_V$ from \citet{Cardelli1989}.  We note that a
-blackbody is a first-order approximation; a synthetic stellar
-atmosphere model (e.g.\ ATLAS9 or PHOENIX) would provide more
-accurate band-integrated fluxes, particularly in the Gaia blue
-passband where line-blanketing is significant.  We retain the
-blackbody approach here as a conservative test: if the dereddened
-SED is already well-described by a simple Planck function with no
-secondary component visible, the constraint on hidden-companion
-luminosity is robust.  The dereddened SED
-is well-described by a single $T_\mathrm{eff} \approx 10\,500$\,K
-source with reduced $\chi^2 \approx 14$, compared to
-$\chi^2 \approx 285$ without extinction correction --- a factor
-of~20 improvement.  The absence of a secondary SED component sets a
-stringent upper limit on the luminosity of any hidden companion.
+We fit the dereddened photometry (Gaia + 2MASS + WISE) using both a
+pure blackbody and an ATLAS9-corrected model that accounts for line
+blanketing via wavelength- and $T_\mathrm{eff}$-dependent correction
+factors interpolated from the \citet{CastelliKurucz2004} synthetic
+photometry grids ($\log g = 4.0$, $[\text{M/H}] = 0.0$).  In both
+cases, $T_\mathrm{eff}$ is fixed from the spectral anchor and $A_V$
+is derived from the colour excess $E(G_\mathrm{BP} - G_\mathrm{RP})$;
+only the overall flux scale is a free parameter.  The
+ATLAS9-corrected SED yields $\chi^2_\nu = 10.9$ for the fiducial B9
+anchor, a 20~per~cent improvement over the pure-blackbody fit
+($\chi^2_\nu = 12.5$), with the correction strongest in the Gaia
+$G_\mathrm{BP}$ band where Balmer-line blanketing is most
+significant.  For comparison, the uncorrected (pre-dereddening)
+SED gives $\chi^2 \approx 285$, a factor of $\sim$26 worse.
+Further improvement is obtained with $R_V = 3.5$
+($\chi^2_\nu = 5.8$), suggesting a mildly non-standard extinction
+law along the sightline at $b = 3.0\degr$.  The absence of a
+secondary SED component sets a stringent upper limit on the
+luminosity of any hidden companion.
 
 \subsection{Monte Carlo mass posterior}
 \label{sec:methods:mc}
@@ -288,7 +291,8 @@ mass gap) gives the posterior probability $P(\text{BH})$.
 For a hypothetical main-sequence companion of mass $M_2$, we compute
 the expected flux ratio $F_\mathrm{comp}/F_\mathrm{prim}$ in each
 photometric band using empirical mass--luminosity--temperature
-relations \citep{Eker2018} and Planck spectral ratios.  A companion
+relations \citep{Eker2018} and Planck spectral ratios corrected by
+the \citet{CastelliKurucz2004} model-atmosphere factors.  A companion
 is deemed detectable if its flux exceeds 1~per~cent of the primary
 in any band.
 
@@ -533,13 +537,13 @@ weakest link.  The following limitations are significant:
   primary mass, minimum companion mass, and BH probability would
   all shift accordingly.  Section~\ref{sec:results:posterior} and
   Table~\ref{tab:sensitivity} quantify this dependence.
-\item \textbf{The SED uses a blackbody approximation} rather than a
-  synthetic stellar atmosphere (e.g.\ ATLAS9 or PHOENIX).
-  While sufficient for the companion-exclusion argument, the
-  elevated $\chi^2 \approx 14$ likely reflects line-blanketing
-  effects absent from a Planck function.  An atmospheric-model
-  upgrade would improve the fit and enable more precise
-  constraints on a hidden secondary.
+\item \textbf{The SED analysis has been upgraded} from a pure
+  blackbody to an ATLAS9-corrected model
+  \citep{CastelliKurucz2004}, reducing $\chi^2_\nu$ from 12.5
+  to 10.9 (and to 5.8 with $R_V = 3.5$).  However, further
+  refinement with full synthetic spectra (e.g.\ PHOENIX) convolved
+  with filter profiles could tighten constraints on any hidden
+  secondary.
 \item \textbf{The hierarchical-triple scenario is not fully
   excluded}, particularly configurations involving two compact
   objects or one compact plus one faint tertiary.  Multi-epoch
@@ -550,9 +554,10 @@ weakest link.  The following limitations are significant:
 \item \textbf{The $P(\text{BH}) = 99.7$~per~cent value is
   model-dependent}: it assumes isotropic inclinations, a specific
   $M_1$ prior, and a BH threshold of $5\,\Msun$.
-  Table~\ref{tab:sensitivity} shows that under reasonable
-  alternative assumptions the value ranges from
-  $\sim$96 to $>$\,99~per~cent --- always high, but not
+  An expanded sensitivity analysis spanning B8, B9, A0, and A2
+  spectral anchors and $R_V \in \{2.5, 3.1, 3.5, 4.0\}$ shows
+  that $P(\text{BH})$ ranges from $\sim$88 to $>$\,99~per~cent
+  under all tested configurations --- always high, but not
   a calibrated absolute probability.
 \end{itemize}
 These limitations define the gap between ``candidate''
@@ -605,8 +610,8 @@ are:
   classification.
 \end{enumerate}
 
-HD~338492 is a strong dormant black hole \emph{candidate} that
-warrants urgent follow-up.  We emphasise that the gap between
+HD~338492 is a high-mass dark companion candidate strongly consistent
+with a dormant black hole that warrants urgent follow-up.  We emphasise that the gap between
 candidate and confirmed detection is significant: independent
 RV verification of the orbit, a modern spectroscopic
 classification to replace the SIMBAD anchor, and UV observations
@@ -639,11 +644,17 @@ from the Gaia Archive
 The analysis scripts, compiled input data, and machine-readable
 results are available at
 \url{https://github.com/jayalabaez/hd338492-black-hole-candidate}.
-Specifically: \texttt{02\_fit\_sed\_extinction.py} produces
-Fig.~\ref{fig:sed}; \texttt{03\_compute\_mass\_posterior.py}
+Specifically: \texttt{02b\_fit\_sed\_atlas.py} produces
+the ATLAS9-corrected SED analysis;
+\texttt{03\_compute\_mass\_posterior.py}
 produces Fig.~\ref{fig:posterior};
 \texttt{04\_companion\_exclusion.py} produces
-Fig.~\ref{fig:companion}; and \texttt{06\_make\_figures.py}
+Fig.~\ref{fig:companion};
+\texttt{07b\_sensitivity\_expanded.py} provides the expanded
+anchor and $R_V$ sensitivity analysis;
+\texttt{08\_archival\_checks.py} carries out the
+variability, literature, and contamination audits (C14--C16);
+and \texttt{06\_make\_figures.py}
 produces Figs~\ref{fig:overview}, \ref{fig:cmd_hrd}, and
 \ref{fig:checklist}.  All numerical results reported in the text
 are reproduced in JSON files under \texttt{results/}.
@@ -718,7 +729,7 @@ MS companion     & Excluded     & 943$\times$ flux excess \\
 White dwarf      & Excluded     & $\fmass > M_\mathrm{Ch}$ \\
 Neutron star     & Excluded     & $M_{2,\min} = 2.9 M_\mathrm{TOV}$ \\
 Triple system    & Unlikely     & Stability + photometry \\
-Stripped He star & Disfavoured  & No UV excess \\
+Stripped He star & Disfavoured  & UV unconstrained (no GALEX) \\
 Artefact         & Excluded     & $\sigma = 249.1$ \\
 \bottomrule
 \end{tabular}
@@ -846,8 +857,8 @@ of $\sim$\,$4.4\,\Msun$.}
 \caption{Confirmation checklist for HD~338492, showing the outcome
 of each diagnostic test.  Green circles indicate PASS, orange
 indicates OPEN (inconclusive), red indicates FAIL (not yet
-satisfied).  The system scores 7P/4O/2F ---
-a ``compelling'' BH candidate requiring follow-up to close the
+satisfied).  The system scores 9P/5O/2F across 16 checks ---
+a BH candidate pending follow-up to close the
 two remaining failures (independent RV and full scenario exclusion).}
 \label{fig:checklist}
 \end{figure*}
